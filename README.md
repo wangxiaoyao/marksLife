@@ -4,3 +4,8 @@
 
 使用的架构是： react + express + MongoDB 
 
+## 前端
+
+```
+npx create-react-app client
+```
