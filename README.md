@@ -9,3 +9,10 @@
 ```
 npx create-react-app client
 ```
+
+
+## 功能点
+
+- 注册/登录功能
+- 记账功能
+- 记事功能
