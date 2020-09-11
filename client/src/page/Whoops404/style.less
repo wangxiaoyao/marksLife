@@ -1,0 +1,53 @@
+.whoops404 {
+  display: flex;
+  justify-content: center;
+  margin-top: 27vh;
+  font-family: "Nunito Sans";
+  svg {
+    width: 400px;
+    height: 300px;
+  }
+  .right {
+    h1 {
+      font-size: 120px;
+      font-weight: bolder;
+    }
+    h2 {
+      font-size: 30px;
+      margin-top: 10px;
+      margin-bottom: 15px;
+    }
+    button {
+      position: relative;
+      margin-top: 30px;
+      width: 180px;
+      height: 50px;
+      border-radius: 25px;
+      border: 3px solid rgb(102, 203, 119);
+      cursor: pointer;
+      font-size: 18px;
+      font-weight: bold;
+      background-color: #fff;
+      outline: none;
+    }
+    button:before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 0;
+      height: 100%;
+      border-radius: 25px;
+    }
+    button:hover {
+      background-color: transparent;
+      color: #fff;
+    }
+    button:hover:before {
+      transition: 0.5s;
+      background-color: #14ae5c;
+      z-index: -1;
+      width: 100%;
+    }
+  }
+}

@@ -1,7 +1,8 @@
-import React, { Component } from "react";
+import React from "react";
+import style from "./style.less";
 
-const Login = () => {
-  return <div>SignIn</div>;
+const Login = (props) => {
+  return <div className={style.login}>{props.children}</div>;
 };
 
 export default Login;

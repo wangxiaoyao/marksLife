@@ -1,21 +1,21 @@
 import React from "react";
-// import svg404 from "../../source/svg404";
+import IconSvg from "@/component/IconSvg";
+import { Link } from "react-router-dom";
+import style from "./style.less";
+require("@/source/svg/starMan.svg");
 
 const Whoops404 = () => {
   return (
-    <div>
-      <svg
-        width="100"
-        height="100"
-        version="1.1"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <rect
-          width="100%"
-          height="100%"
-          style="fill:blue;stroke-width:2;stroke:rgb(0,0,0)"
-        />
-      </svg>
+    <div className={style.whoops404}>
+      <IconSvg name="starMan"></IconSvg>
+      <div className={style.right}>
+        <h1>404</h1>
+        <h2>UH OH! 页面丢失</h2>
+        <p>您所寻找的页面不存在。你可以点击下面的按钮，返回主页。</p>
+        <Link to="/login/signUp">
+          <button>返回首页</button>
+        </Link>
+      </div>
     </div>
   );
 };
