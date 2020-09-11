@@ -9,6 +9,7 @@
 ```
 npx create-react-app client
 antd
+axios
 ```
 
 ## server
@@ -42,3 +43,21 @@ brew services start XXX
 - 注册/登录功能
 - 记账功能
 - 记事功能
+
+
+
+## 知识点
+
+### 1 路由配置
+
+1 配置404页面： 需要配置Switch 组件。 因为该组件只渲染其中一个子路由
+
+
+### SVG使用
+
+```
+## webpack处理svg
+npm install svg-sprite-loader -D
+```
+
+

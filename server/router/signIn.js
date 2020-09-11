@@ -16,10 +16,10 @@ router.post("/", (req, res, next) => {
         // 用来比较密码是否相同
         bcrypt.compare(req.body.password, user[0].password, (err, result) => {
           console.log("1err", err);
-          console.log("result", result);
+          console.log("result: true 或者 false", result);
           if (err) {
             return res.status(401).json({
-              message: "密码不对",
+              message: "有错误",
             });
           }
           if (result) {
@@ -27,9 +27,11 @@ router.post("/", (req, res, next) => {
               message: "密码正确,成功登陆",
             });
           }
-          // return res.status(401).json({
-          //   message: "密码不对",
-          // });
+          if (!result) {
+            return res.status(200).json({
+              message: "密码不正确",
+            });
+          }
         });
       }
     })
